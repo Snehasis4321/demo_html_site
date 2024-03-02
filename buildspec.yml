@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       - echo Building started
-      - cp index.html /usr/share/nginx/html/
+      - cp index.html .
 
   post_build:
     commands:
@@ -16,4 +16,4 @@ phases:
 
 artifacts:
   files:
-    - /usr/share/nginx/html/index.html
+    - index.html
