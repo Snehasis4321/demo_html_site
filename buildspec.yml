@@ -1,0 +1,19 @@
+version: 0.0
+
+phases:
+  install:
+    commands:
+      - echo Currently installing nginx
+  
+  build:
+    commands:
+      - echo Building started
+      - cp index.html /usr/share/nginx/html
+
+  post_build:
+    commands:
+      - echo configuring nginx
+
+artifacts:
+  files:
+    - /usr/share/nginx/html/index.html
