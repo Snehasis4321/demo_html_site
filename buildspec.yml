@@ -2,13 +2,13 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Currently installing nginx
-      - yum install nginx -y
+      - echo making a new folder in usr
+      - mkdir /usr/build
   
   build:
     commands:
-      - echo Building started
-      - cp -r * /usr/share/nginx/html
+      - echo Building started on `date`
+      - cp -r * /usr/build
 
   post_build:
     commands:
@@ -16,4 +16,4 @@ phases:
 
 artifacts:
   files:
-    - /usr/share/nginx/html/*
+    - /usr/build/*
